@@ -1,4 +1,45 @@
-# Getting Started with Create React App
+# Intalación
+
+- Pasos a seguir para la creación de la Base de datos:
+
+  1. Instalamos todas las dependencias introduciendo 'npm i' en el terminal.
+  2. Creamos en mySQL Workbench una base de datos, y la activamos con 'USE'.
+  3. Crearemos un archivo .env con los campos guardados en .env.example, y los rellenaremos con nuestros datos de usuario.
+  4. Introducimos en el terminal 'npm run initDB', para crear una conexión con la base de datos y crear las tablas pertinentes.
+
+  # Entidades
+
+  -users:
+  id,
+  email,
+  password,
+  username,
+  name,
+  bio,
+  img,
+  created_at,
+  updated_at
+
+  -posts:
+  id,
+  user_id,
+  text,
+  created_at,
+  updated_at
+
+  -mentions:
+  post_id,
+  mentioned_user_id
+
+  -repost:
+  original_post_id,
+  reposter_id,
+
+  -replies:
+  post_id,
+  replied_to_post_id
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +108,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
