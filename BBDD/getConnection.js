@@ -8,7 +8,7 @@ async function getDB() {
     try {
         if (!pool) {
             pool = mysql.createPool({
-                conectionLimit: 10,
+                connectionLimit: 10,
                 host: MYSQL_HOST,
                 user: MYSQL_USER,
                 password: MYSQL_PASSWORD,
