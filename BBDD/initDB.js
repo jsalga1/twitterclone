@@ -10,11 +10,11 @@ async function createDatabase() {
         connection = await getDB();
         console.log('Borrando tablas existentes...')
         
-        await connection.query('DROP TABLE IF EXISTS users');
-        await connection.query('DROP TABLE IF EXISTS posts');
-        await connection.query('DROP TABLE IF EXISTS mentions');
         await connection.query('DROP TABLE IF EXISTS repost');
+        await connection.query('DROP TABLE IF EXISTS mentions');
         await connection.query('DROP TABLE IF EXISTS replies');
+        await connection.query('DROP TABLE IF EXISTS posts');
+        await connection.query('DROP TABLE IF EXISTS users');
 
         console.log('Creando tablas...');
 
@@ -56,7 +56,7 @@ async function createDatabase() {
         `);
 
         await connection.query(`
-        CREATE TABLE reposts (
+        CREATE TABLE repost (
             original_post_id INT UNSIGNED NOT NULL,
             reposter_id INT UNSIGNED NOT NULL,
             PRIMARY KEY (original_post_id, reposter_id),
