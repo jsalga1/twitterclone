@@ -1,4 +1,4 @@
-'use strict'
+"use strict"
 
 const mysql = require('mysql2/promise');
 
